@@ -1,58 +1,65 @@
 ---
-import '../styles/globals.css'
-
+import "../styles/globals.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<main>
-			<div>
-				<div class="w-full text-center text-[1.875rem] lg:text-[1.5625rem] tracking-[0.25em] text-dark-grayish-cyan">
-          <h1>
-						Simple, traffic-based pricing
-          </h1>
-					<p>n
-						Sign-up for our 30-day trial. No credit card required.
-					</p>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <main class="w-full h-screen flex justify-center lg:items-center">
+      <div class="max-w-[620px] w-full">
+        <div
+          class="w-full text-center text-[1.875rem] lg:text-[1.5625rem] tracking-[0.25em] text-dark-grayish-cyan"
+        >
+          <h1>Simple, traffic-based pricing</h1>
+          <p>n Sign-up for our 30-day trial. No credit card required.</p>
         </div>
 
-				<div class="w-full p-[2.375rem] bg-white rounded-3xl">
-					<div>
-						<div>
-							<h2>100k pageviews</h2>
-							<p>$16.00 <span>/month</span></p>
-						</div>
-						<div>
-							<input type="range" min="0" max="100" value="50" />
-						</div>
-						<div>
-							<p>Monthly Billing</p>
-							<input type="checkbox" />
-							<p>25% discount</p>
-							<p>Yearly Billing</p>
-						</div>
-					</div>
-					<div>
-						<div>
-							<ul>
-								<li>Unlimited websites</li>
-								<li>100% data ownership</li>
-								<li>Email reports</li>
-							</ul>
-						</div>
-						<div>
-							<button>Start my trial</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-	</body>
+        <div class="w-full bg-white rounded-3xl">
+          <div class=" p-[2.375rem]">
+            <div>
+              <p>100k pageviews</p>
+              <input type="range" min="0" max="100" value="50" />
+              <h2>$16.00 <span>/month</span></h2>
+            </div>
+            <div class="flex justify-end text-grayish-blue-text items-center">
+              <p>Monthly Billing</p>
+              <input type="checkbox" class="mx-5"/>
+              <p>25% discount</p>
+              <p class="p-[.1875rem] text-light-red mr-2">Yearly Billing</p>
+            </div>
+          </div>
+
+          <div class="w-full h-[.0625rem] bg-red-600"></div>
+
+          <div class="flex justify-between p-[2.375rem]">
+            <div class="flex-1">
+              <ul class="flex flex-col gap-2 text-grayish-blue-text text-sm">
+                <li class="flex items-center gap-3">
+									<img src="/images/icon-check.svg" alt="icon check">
+									<span>Unlimited websites</span>
+								</li>
+                <li class="flex items-center gap-3">
+									<img src="/images/icon-check.svg" alt="icon check">
+									<span>100% data ownership</span>
+								</li>
+                <li class="flex items-center gap-3">
+									<img src="/images/icon-check.svg" alt="icon check">
+									<span>Email reports</span>
+								</li>
+              </ul>
+            </div>
+            <div class="flex flex-1 justify-center items-center">
+              <button class="rounded-full bg-dark-desaturated-blue text-white px-11 py-3">Start my trial</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
